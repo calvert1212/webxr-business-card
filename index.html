@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slash Nine Labs - AR Business Card</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="landing">
+        <h1>Slash Nine Labs</h1>
+        <p>Point your camera at an open space to begin the AR experience</p>
+    </div>
+    
+    <a-scene embedded arjs="trackingMethod: best;">
+        <a-marker preset="hiro">
+            <a-entity
+                position="0 0 0"
+                scale="1 1 1"
+                gltf-model="#logo">
+            </a-entity>
+            
+            <a-text value="Slash Nine Labs logo here" position="0 1.5 0" align="center"></a-text>
+            <a-text value="Innovation Through Technology" position="0 1.2 0" align="center" scale="0.5 0.5 0.5"></a-text>
+            
+            <!-- Interactive Social Media Links -->
+            <a-entity position="0 0.5 0">
+                <a-plane position="-0.5 0 0" color="#0077B5" width="0.3" height="0.3" class="clickable" 
+                         link="href: https://linkedin.com/company/slash-nine-labs"></a-plane>
+                <a-plane position="0 0 0" color="#333" width="0.3" height="0.3" class="clickable"
+                         link="href: https://github.com/slash-nine-labs"></a-plane>
+                <a-plane position="0.5 0 0" color="#1DA1F2" width="0.3" height="0.3" class="clickable"
+                         link="href: https://twitter.com/slashninelabs"></a-plane>
+            </a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+
+</html>
