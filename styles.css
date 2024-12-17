@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+#landing {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.clickable {
+    cursor: pointer;
+}
